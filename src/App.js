@@ -14,7 +14,7 @@ function App() {
       <Link to="/" className="my-logo">BookStore</Link>
       <div className="link-container">
         <Link className="my-link" to="/">BOOKS</Link>
-        <Link className="my-link" to="/calculator">CATEGORIES</Link>
+        <Link className="my-link" to="/categories">CATEGORIES</Link>
       </div>
     </nav>
     <Routes>

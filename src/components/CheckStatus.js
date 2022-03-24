@@ -7,3 +7,5 @@ const CheckStatus = () => {
     </div>
   );
 }
+
+export default CheckStatus;

@@ -11,3 +11,5 @@ const BookInput = () => {
     </div>
   )
 }
+
+export default BookInput;
