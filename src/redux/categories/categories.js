@@ -1,14 +1,12 @@
-//Actions
+// Actions
 const CHECKCAT = 'CHECKCAT';
 
-//Actions Creators
-export const checkCat = () => {
-  return {type: CHECKCAT}
-}
+// Actions Creators
+export const checkCat = () => ({ type: CHECKCAT });
 
-//Reducer
+// Reducer
 export default function catReducer(state = [], action) {
-  switch(action.type) {
+  switch (action.type) {
     case CHECKCAT:
       return 'Under construction';
     default:
