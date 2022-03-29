@@ -1,5 +1,5 @@
 // Actions
-const CHECKCAT = 'CHECKCAT';
+const CHECKCAT = 'bookstore/catReducer/CHECK_CAT';
 
 // Actions Creators
 export const checkCat = () => ({ type: CHECKCAT });

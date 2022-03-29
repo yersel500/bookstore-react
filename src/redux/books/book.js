@@ -1,6 +1,6 @@
 // Actions
-const ADDBOOK = 'ADDBOOK';
-const REMOVEBOOK = 'REMOVEBOOK';
+const ADDBOOK = 'bookstore/bookReducer/ADD_BOOK';
+const REMOVEBOOK = 'bookstore/bookReducer/REMOVE_BOOK';
 
 // Actions Creators
 export const addBook = (newBook) => ({ type: ADDBOOK, book: newBook });
