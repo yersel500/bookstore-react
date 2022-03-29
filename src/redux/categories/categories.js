@@ -2,7 +2,7 @@
 const CHECKCAT = 'CHECKCAT';
 
 //Actions Creators
-export function checkCat() {
+export const checkCat = () => {
   return {type: CHECKCAT}
 }
 

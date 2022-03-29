@@ -3,11 +3,11 @@ const ADDBOOK = 'ADDBOOK';
 const REMOVEBOOK = 'REMOVEBOOK';
 
 //Actions Creators
-export function addBook(newBook) {
+export const addBook = (newBook) => {
   return {type: ADDBOOK, book: newBook};
 }
 
-export function removeBook(myBook) {
+export const removeBook = (myBook) => {
   return {type: REMOVEBOOK, book: myBook};
 }
 
@@ -17,13 +17,11 @@ export default function bookReducer(state = [], action) {
     case ADDBOOK:
       return ([
         ...state,
-        newBook
+        action.book
       ]
       );
     case REMOVEBOOK:
-      return ([
-        ...state,
-      ]);
+      return state.filter(element => element.id !== action.book.id);
       default:
         return state;
   }
