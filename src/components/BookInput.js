@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/book';
-import { v4 as uuidv4 } from "uuid";
 
 const BookInput = () => {
   const [book, SetBook] = useState({
@@ -29,7 +29,6 @@ const BookInput = () => {
 
   const handleBook = (e) => {
     e.preventDefault();
-    console.log(book);
     dispatch(addBook(book));
   };
 

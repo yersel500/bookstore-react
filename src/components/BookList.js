@@ -4,13 +4,12 @@ import Book from './Book';
 
 const BookList = () => {
   const myState = useSelector((state) => state);
-  console.log(myState);
   return (
     <div>
-      {myState.add.map((bookDetail, index) => (
+      {myState.add.map((bookDetail) => (
         <Book
           details={bookDetail}
-          key={`book-${index}`}
+          key={bookDetail.id}
         />
       ))}
     </div>
