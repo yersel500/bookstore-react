@@ -7,9 +7,12 @@ const BookList = () => {
   console.log(myState);
   return (
     <div>
-      <Book />
-      <Book />
-      <Book />
+      {myState.add.map((bookDetail, index) => (
+        <Book
+          details={bookDetail}
+          key={`book-${index}`}
+        />
+      ))}
     </div>
   );
 };
