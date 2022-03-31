@@ -1,17 +1,22 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/book';
+import { eraseBook } from '../redux/books/book';
 
 const Book = ({ details }) => {
-  const { author, title, id } = details;
+  const {
+    author, title, id, category,
+  } = details;
   const dispatch = useDispatch();
   const deleteBook = (e) => {
-    dispatch(removeBook(e.target.id));
+    dispatch(eraseBook(e.target.id));
   };
   return (
     <div>
-      <p>My category</p>
+      <p>
+        {' '}
+        {category}
+      </p>
       <h2>{title}</h2>
       <p>{author}</p>
       <button type="button" id={id} onClick={deleteBook}> Remove </button>
@@ -19,12 +24,17 @@ const Book = ({ details }) => {
   );
 };
 
-Book.defaultProps = { details: { author: '', title: '', id: '' } };
+Book.defaultProps = {
+  details: {
+    author: '', title: '', id: '', category: '',
+  },
+};
 Book.propTypes = {
   details: {
     author: PropTypes.string,
     title: PropTypes.string,
     id: PropTypes.string,
+    category: PropTypes.string,
   },
 };
 

@@ -1,5 +1,3 @@
-import { useDispatch } from "react-redux";
-
 // Actions
 const ADDBOOK = 'bookstore/bookReducer/ADD_BOOK';
 const REMOVEBOOK = 'bookstore/bookReducer/REMOVE_BOOK';
@@ -24,33 +22,57 @@ export const postBook = (newBook) => async () => {
   });
 };
 
+export const removeBook = (id) => ({ type: REMOVEBOOK, payload: id });
+
+export const apiBook = (data) => ({
+  type: APIBOOK,
+  payload: data,
+});
+
 export const getBooks = () => async (dispatch) => {
-  const itemUrl = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/opIvy7T4p9EOFrXXjvZD/books`;
+  const itemUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/opIvy7T4p9EOFrXXjvZD/books';
   const response = await fetch(itemUrl);
   const data = await response.json();
   const data1 = [];
-  for ( const element in data) {
-    const newdata = data[element][0];
-    const newdata2 = {
-      ...newdata,
-      id: element
-    }; 
-    data1.push(newdata2);
-  }
+  // for (const [key, value] of Object.entries(data))
+  Object.entries(data).forEach(([key, value]) => {
+    const newValue = value[0];
+    const newdata = {
+      ...newValue,
+      id: key,
+    };
+    data1.push(newdata);
+  });
+
+  // for (const element in data) {
+  //   const newdata = data[element][0];
+  //   const newdata2 = {
+  //     ...newdata,
+  //     id: element,
+  //   };
+  //   data1.push(newdata2);
+  // }
   console.log(data);
   console.log(data1);
   initialState = data1;
   dispatch(apiBook(data1));
-
 };
 
+export const eraseBook = (id) => {
+  const deleteBook = { item_id: id };
+  return (async (dispatch) => {
+    await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/opIvy7T4p9EOFrXXjvZD/books/${deleteBook.item_id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(deleteBook),
+    });
+    dispatch(removeBook(id));
+  });
+};
 
 export const addBook = (newBook) => ({ type: ADDBOOK, payload: newBook });
-
-export const removeBook = (myBook) => ({ type: REMOVEBOOK, payload: myBook });
-
-export const apiBook = (data) => ({ type: APIBOOK,
-payload: data})
 
 // Reducer
 export default function bookReducer(state = initialState, action) {
