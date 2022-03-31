@@ -34,7 +34,6 @@ export const getBooks = () => async (dispatch) => {
   const response = await fetch(itemUrl);
   const data = await response.json();
   const data1 = [];
-  // for (const [key, value] of Object.entries(data))
   Object.entries(data).forEach(([key, value]) => {
     const newValue = value[0];
     const newdata = {
@@ -43,17 +42,6 @@ export const getBooks = () => async (dispatch) => {
     };
     data1.push(newdata);
   });
-
-  // for (const element in data) {
-  //   const newdata = data[element][0];
-  //   const newdata2 = {
-  //     ...newdata,
-  //     id: element,
-  //   };
-  //   data1.push(newdata2);
-  // }
-  console.log(data);
-  console.log(data1);
   initialState = data1;
   dispatch(apiBook(data1));
 };
