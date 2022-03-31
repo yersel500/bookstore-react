@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/book';
+import { addBook, postBook } from '../redux/books/book';
 
 const BookInput = () => {
   const [book, SetBook] = useState({
@@ -30,6 +30,9 @@ const BookInput = () => {
   const handleBook = (e) => {
     e.preventDefault();
     dispatch(addBook(book));
+    dispatch(postBook(book));
+    e.target.author.value = '';
+    e.target.title.value = '';
   };
 
   return (
