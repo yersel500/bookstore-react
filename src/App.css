@@ -1,19 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
 .my-nav {
   display: flex;
   justify-content: flex-start;
-  padding: 2rem 4rem;
+  padding: 2rem 7rem;
   align-items: center;
   gap: 2rem;
 }
 
 .my-logo {
-  font-size: 2rem;
   text-decoration: none;
-  color: black;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: bold;
+  font-size: 1.875rem;
+  color: #0290ff;
 }
 
 .my-link {
   padding: 0.5rem;
-  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.813rem;
+  color: #121212;
+}
+
+.my-user {
+  margin-left: auto;
+}
+
+.card-container {
+  margin: 1rem 7rem;
+  padding: 2rem;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.category {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.title {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.375rem;
+  color: #121212;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.author,
+.comments,
+.remove,
+.edit {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.comments,
+.remove,
+.edit {
+  border: none;
+  border-right: 1px solid #e8e8e8;
+  background-color: transparent;
+}
+
+.edit {
+  border: none;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.percentage {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.status {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.circle-progress {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  border-left: 1px solid #e8e8e8;
+  padding: 0 4rem;
+}
+
+.chapter-title {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.chapter-name {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.update-progress {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: #0290ff;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+}
+
+.booklist,
+.form-container {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+.form-container {
+  padding: 2rem 8rem;
+}
+
+.internal-form-container {
+  border-top: 1px solid #e8e8e8;
+}
+
+.title-form {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #888;
+}
+
+.form {
+  display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.author-input,
+.title-input {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #c4c4c4;
+  padding: 0.8rem;
+  border: 1px solid #e8e8e8;
+  width: 40%;
+}
+
+.submit-book {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background-color: #0290ff;
+  border-radius: 3px;
+  border: none;
+  padding: 1rem 2.5rem;
+}
+
+.user-container {
+  color: #0290ff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
