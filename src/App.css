@@ -9,11 +9,20 @@
 .my-logo {
   font-size: 2rem;
   text-decoration: none;
-  color: black;
+  color: #0290ff;
   font-weight: bold;
 }
 
 .my-link {
   padding: 0.5rem;
   font-weight: 600;
+}
+
+.card-container {
+  margin: 1rem;
+  padding: 2rem;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }

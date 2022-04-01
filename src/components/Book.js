@@ -12,14 +12,31 @@ const Book = ({ details }) => {
     dispatch(eraseBook(e.target.id));
   };
   return (
-    <div>
-      <p>
-        {' '}
-        {category}
-      </p>
-      <h2>{title}</h2>
-      <p>{author}</p>
-      <button type="button" id={id} onClick={deleteBook}> Remove </button>
+    <div className="card-container">
+      <div className="book-info">
+        <p className="category">
+          {category}
+        </p>
+        <h2 className="title">{title}</h2>
+        <p className="author">{author}</p>
+        <div className="button-container">
+          <button type="button" className="comments">Comments</button>
+          <button type="button" id={id} className="remove" onClick={deleteBook}> Remove </button>
+          <button type="button" className="edit">Edit</button>
+        </div>
+      </div>
+      <div className="progress-container">
+        <div className="circle-progress" />
+        <div className="percentage-container">
+          <p className="percentage">64%</p>
+          <p className="status">Completed</p>
+        </div>
+      </div>
+      <div className="chapter-container">
+        <p className="chapter-title">CURRENT CHAPTER</p>
+        <p className="chapter-name">Chapter 17</p>
+        <button type="button" className="update-progress">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 };
