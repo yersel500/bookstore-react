@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { eraseBook } from '../redux/books/book';
 
 const Book = ({ details }) => {
@@ -29,9 +30,9 @@ const Book = ({ details }) => {
         </div>
       </div>
       <div className="progress-container">
-        <div className="circle-progress" />
+        <div className="circle-progress">
           <CircularProgressbar value={progress} />
-        <div/>
+        </div>
         <div className="percentage-container">
           <p className="percentage">64%</p>
           <p className="status">Completed</p>

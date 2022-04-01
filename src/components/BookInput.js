@@ -36,12 +36,15 @@ const BookInput = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleBook}>
-        <input type="text" placeholder="Enter the author" name="author" onChange={handleAuthor} />
-        <input type="text" placeholder="Enter the title" name="title" onChange={handleTitle} />
-        <button type="submit">Add new</button>
-      </form>
+    <div className="form-container">
+      <div className='internal-form-container'>
+        <p className="title-form">ADD NEW BOOK</p>
+        <form onSubmit={handleBook} className="form">
+          <input type="text" placeholder="Enter the author" name="author" onChange={handleAuthor} className="author-input" />
+          <input type="text" placeholder="Enter the title" name="title" onChange={handleTitle} className="title-input" />
+          <button type="submit" className="submit-book">ADD A BOOK</button>
+        </form>
+      </div>
     </div>
   );
 };

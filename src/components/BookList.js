@@ -12,7 +12,7 @@ const BookList = () => {
 
   const myState = useSelector((state) => state.bookReducer);
   return (
-    <div>
+    <div className="booklist">
       {myState.map((bookDetail) => (
         <Book
           details={bookDetail}

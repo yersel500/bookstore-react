@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <nav className="my-nav">
-        <Link to="/" className="my-logo">BookStore</Link>
+        <Link to="/" className="my-logo">BookStore CMS</Link>
         <div className="link-container">
           <Link className="my-link" to="/">BOOKS</Link>
           <Link className="my-link" to="/categories">CATEGORIES</Link>
