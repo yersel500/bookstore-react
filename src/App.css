@@ -9,15 +9,24 @@
 }
 
 .my-logo {
-  font-size: 2rem;
   text-decoration: none;
-  color: #0290ff;
+  font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: bold;
+  font-size: 1.875rem;
+  color: #0290ff;
 }
 
 .my-link {
   padding: 0.5rem;
-  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.813rem;
+  color: #121212;
+}
+
+.my-user {
+  margin-left: auto;
 }
 
 .card-container {
@@ -200,6 +209,17 @@
   border-radius: 3px;
   border: none;
   padding: 1rem 2.5rem;
+}
+
+.user-container {
+  color: #0290ff;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

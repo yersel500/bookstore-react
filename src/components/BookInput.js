@@ -37,7 +37,7 @@ const BookInput = () => {
 
   return (
     <div className="form-container">
-      <div className='internal-form-container'>
+      <div className="internal-form-container">
         <p className="title-form">ADD NEW BOOK</p>
         <form onSubmit={handleBook} className="form">
           <input type="text" placeholder="Enter the author" name="author" onChange={handleAuthor} className="author-input" />
