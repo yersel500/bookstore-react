@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
 .my-nav {
   display: flex;
   justify-content: flex-start;
@@ -26,3 +28,71 @@
   flex-grow: 1;
   justify-content: space-between;
 }
+
+.category {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.title {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.375rem;
+  color: #121212;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.author,
+.comments,
+.remove,
+.edit {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.comments,
+.remove,
+.edit {
+  border: none;
+  border-right: 1px solid #e8e8e8;
+  background-color: transparent;
+}
+
+.edit {
+  border: none;
+}
+
+.percentage {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.status {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.circle-progress {
+  border: 2px solid blue;
+  width: 100px;
+  height: 100px;
+}
+
+
