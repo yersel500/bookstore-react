@@ -12,12 +12,7 @@
 
 ## Live Demo
 
-Clone the repo and run: 
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [Live Demo](https://joyful-heliotrope-205072.netlify.app/) to view it in your browser.
 
 ## Features
 The project is using two APIs:
